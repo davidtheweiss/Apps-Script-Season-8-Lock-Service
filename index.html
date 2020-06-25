@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= includeExternalFile('indexCSS') ?>
+  </head>
+  <body>
+    <div class='container'>
+      <input id='firstname' placeholder='First Name'>
+      <button>Sign Up</button>
+    </div>
+    <script>
+    
+      document.getElementsByTagName('button')[0].addEventListener('click', _ => {
+        const fname = document.getElementById('firstname').value;
+        google.script.run.addNameToDatabase(fname);
+      });
+      
+    </script>
+  </body>
+</html>
+
+
